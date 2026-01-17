@@ -1,11 +1,6 @@
-// src/app/api/upload/[entity]/route.ts
-
 import { NextRequest, NextResponse } from "next/server"
 import { PrismaClient } from "@prisma/client"
-import { FormData, File as FormDataFile } from "formdata-node"
-import { Readable } from "stream"
 import * as XLSX from "xlsx"
-import { parseForm } from "@/lib/parseMultipart"
 
 const prisma = new PrismaClient()
 
