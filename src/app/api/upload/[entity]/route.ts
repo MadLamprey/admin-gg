@@ -9,9 +9,8 @@ import { parseForm } from "@/lib/parseMultipart"
 
 const prisma = new PrismaClient()
 
-export async function POST(request: NextRequest, context: { params: { entity: string } }) {
+export async function POST(request: NextRequest) {
   try {
-    console.log(request, context);
     const contentType = request.headers.get("content-type") || ""
     if (!contentType.startsWith("multipart/form-data")) {
       return NextResponse.json({ error: "Invalid content-type" }, { status: 400 })
