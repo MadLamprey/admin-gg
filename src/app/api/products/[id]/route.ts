@@ -81,6 +81,8 @@ export async function PUT(req: NextRequest) {
           ? data.keywords
           : data.keywords.split(",").map((k: string) => k.trim()),
         isActive: true,
+        metaTitle: data.metaTitle,
+        metaDesc: data.metaDesc,
         brand: { connect: { id: brand.id } },
         category: { connect: { id: category.id } },
         ageGroup: { connect: { id: ageGroup.id } },

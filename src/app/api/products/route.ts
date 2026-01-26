@@ -48,6 +48,8 @@ export async function POST(req: Request) {
         discount: data.discount,
         isActive: true,
         keywords: data.keywords.split(",").map((k: string) => k.trim()),
+        metaTitle: data.metaTitle,
+        metaDesc: data.metaDesc,
         brand: {
         connect: { id: brand.id },
         },

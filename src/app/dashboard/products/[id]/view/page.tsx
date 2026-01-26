@@ -29,6 +29,8 @@ export default function ViewProductPage() {
     discount: "",
     keywords: "",
     description: "",
+    metaTitle: "",
+    metaDesc: "",
     images: [] as { url: string; alt?: string }[],
   })
 
@@ -77,6 +79,8 @@ export default function ViewProductPage() {
             ["discount", "Discount %"],
             ["keywords", "Keywords (comma-separated)"],
             ["description", "Description"],
+            ["metaTitle", "Meta Title"],
+            ["metaDesc", "Meta Description"],
           ].map(([key, label]) => (
             <div key={key} className="space-y-1">
               <Label htmlFor={key} className="text-sm font-bold text-[#1a1a2e]">

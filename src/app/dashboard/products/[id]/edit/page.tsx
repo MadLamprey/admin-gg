@@ -27,6 +27,8 @@ export default function EditProductPage() {
     brand: "",
     category: "",
     ageGroup: "",
+    metaTitle: "",
+    metaDesc: "",
   })
 
   const [brands, setBrands] = useState<string[]>([])
@@ -149,7 +151,9 @@ export default function EditProductPage() {
               ["price", "Price"],
               ["discount", "Discount %"],
               ["keywords", "Keywords (comma-separated)"],
-              ["description", "Description"]
+              ["description", "Description"],
+              ["metaTitle", "Meta Title"],
+              ["metaDesc", "Meta Description"],
             ].map(([key, label]) => (
               <div key={key} className="space-y-1">
                 <Label htmlFor={key} className="text-sm font-bold text-[#1a1a2e]">{label}</Label>
